@@ -27,11 +27,6 @@
       scroll-behavior: smooth;
     }
 
-    * {
-      scrollbar-width: thin; 
-      scrollbar-color: var(--accent); 
-    }
-
     /* Scrollbar container */
     ::-webkit-scrollbar {
         width: 10px;
@@ -40,7 +35,7 @@
 
     /* Scrollbar track (background) */
     ::-webkit-scrollbar-track {
-        background: #1a1a1a;
+        background: rgba(255, 215, 0, 0.05);
         /* dark background */
         border-radius: 10px;
     }
@@ -239,25 +234,6 @@
       font-weight: 600;
     }
 
-    /* Scrollbar style same as alerts */
-    .notification-list::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .notification-list::-webkit-scrollbar-track {
-      background: rgba(255, 215, 0, 0.05);
-      border-radius: 10px;
-    }
-
-    .notification-list::-webkit-scrollbar-thumb {
-      background: var(--accent);
-      border-radius: 10px;
-    }
-
-    .notification-list::-webkit-scrollbar-thumb:hover {
-      background: #ffec7a;
-    }
-
     .alerts {
       display: flex;
       flex-direction: column;
@@ -278,24 +254,6 @@
       flex-direction: column;
       gap: 12px;
       padding-right: 6px;
-    }
-
-    .alert-list::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .alert-list::-webkit-scrollbar-track {
-      background: rgba(255, 215, 0, 0.05);
-      border-radius: 10px;
-    }
-
-    .alert-list::-webkit-scrollbar-thumb {
-      background: var(--accent);
-      border-radius: 10px;
-    }
-
-    .alert-list::-webkit-scrollbar-thumb:hover {
-      background: #ffec7a;
     }
 
     .alert {
@@ -644,14 +602,3 @@
         width: 100%;
       }
     }
-
-
-
-
-
-
-
-
-
-
-
