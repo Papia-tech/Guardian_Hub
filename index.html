@@ -4,11 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guardian Hub</title>
+
+
+
+  <!-- ✅ Canonical URL -->
+  <link rel="canonical" href="https://papia-tech.github.io/LOOI_Robot/">
+  
+  <meta name="description" content="Guardian Hub – A smart safety and monitoring dashboard for real-time alerts and insights.">
+  <meta name="keywords" content="Guardian Hub, Protection, Shield, Safety, Monitoring, Dashboard, Real-time Alerts, Security, IoT, Smart Home, Surveillance, Data Visualization">
+  <meta name="author" content="Papia Karmakar">
+  <meta name="Hub" content="index, follow">
+  <link rel="canonical" href="https://papia-tech.github.io/Guardian_Hub/">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="Favicon.png" type="image/png" sizes="16x16">
+
+  <!-- ✅ Social Media: Open Graph -->
+  <meta property="og:title" content="Guardian Hub – A Smart Safety & Monitoring Dashboard">
+  <meta property="og:description" content="Guardian Hub – A smart safety and monitoring dashboard for real-time alerts and insights.">
+  <meta property="og:url" content="https://papia-tech.github.io/Guardian_Hub/">
+  <meta property="og:image" content="Shield.png">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Social Media: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guardian Hub – A Smart Safety & Monitoring Dashboard">
+  <meta name="twitter:description" content="Guardian Hub – A smart safety and monitoring dashboard for real-time alerts and insights.">
+  <meta name="twitter:image" content="Shield.png">
+
+  <!-- ✅ Title -->
+  <title>Meet LOOI – A Cute Interactive Robot with Emotions | HTML, CSS, JS</title>
 
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,22 +52,7 @@
           <ul class="notification-list">
             <li class="new">
               <i class="fa-solid fa-shield-halved icon"></i>
-              Security system
-              <span class="time">2m ago</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-plug-circle-bolt icon"></i>
-              Device connected
-              <span class="time">10m ago</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-user-check icon"></i>
-              User login successful
-              <span class="time">1h ago</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-shield-halved icon"></i>
-              Security system
+              Security system armed
               <span class="time">2m ago</span>
             </li>
             <li>
@@ -51,14 +66,29 @@
               <span class="time">10m ago</span>
             </li>
             <li>
-              <i class="fa-solid fa-shield-halved icon"></i>
-              Security system
-              <span class="time">2m ago</span>
+              <i class="fa-solid fa-plug-circle-bolt icon"></i>
+              Device connected
+              <span class="time">10m ago</span>
             </li>
             <li>
-              <i class="fa-solid fa-user-check icon"></i>
-              User login successful
-              <span class="time">1h ago</span>
+              <i class="fa-solid fa-plug-circle-bolt icon"></i>
+              Device connected
+              <span class="time">10m ago</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-plug-circle-bolt icon"></i>
+              Device connected
+              <span class="time">10m ago</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-plug-circle-bolt icon"></i>
+              Device connected
+              <span class="time">10m ago</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-plug-circle-bolt icon"></i>
+              Device connected
+              <span class="time">10m ago</span>
             </li>
             <li>
               <i class="fa-solid fa-plug-circle-bolt icon"></i>
@@ -80,11 +110,6 @@
               User login successful
               <span class="time">1h ago</span>
             </li>
-            <li>
-              <i class="fa-solid fa-plug-circle-bolt icon"></i>
-              Device connected
-              <span class="time">10m ago</span>
-            </li>
           </ul>
         </div>
 
@@ -96,26 +121,16 @@
               Running smoothly
               <span class="time">20m ago</span>
             </div>
+            <div class="alert danger">
+              <i class="fa-solid fa-fire"></i>
+              High temperature
+              <span class="time">1m ago</span>
+            </div>
             <div class="alert warning">
               <i class="fa-solid fa-wifi"></i>
               Network unstable
               <span class="time">8m ago</span>
             </div>
-            <div class="alert danger">
-              <i class="fa-solid fa-fire"></i>
-              High temperature
-              <span class="time">1m ago</span>
-            </div><div class="alert warning">
-              <i class="fa-solid fa-wifi"></i>
-              Network unstable
-              <span class="time">8m ago</span>
-            </div>
-            <div class="alert success">
-              <i class="fa-solid fa-circle-check"></i>
-              Running smoothly
-              <span class="time">20m ago</span>
-            </div>
-            
           </div>
         </div>
 
@@ -123,11 +138,13 @@
         <div class="card navigation">
           <nav>
             <ul>
-              <li><a href="#hero" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-              <li><a href="#second" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-chart-line"></i> <span>Analytics</span></a></li>
+              <li><a href="#hero" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-house"></i>
+                  <span>Home</span></a></li>
+              <li><a href="#second" style="color: inherit; text-decoration: none;"><i
+                    class="fa-solid fa-chart-line"></i> <span>Analytics</span></a></li>
               <li><i class="fa-solid fa-cogs"></i> <span>Settings</span></li>
-              <li><i class="fa-solid fa-question-circle"></i> <span>Help</span></li>
               <li><i class="fa-solid fa-wifi"></i> <span>Connected</span></li>
+              <li><i class="fa-solid fa-question-circle"></i> <span>Help</span></li>
               <li><i class="fa-solid fa-user"></i> <span>Login</span></li>
             </ul>
           </nav>
@@ -175,8 +192,8 @@
             <li><a href="#second" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-chart-line"></i>
                 <span>Analytics</span></a></li>
             <li><i class="fa-solid fa-cogs"></i> <span>Settings</span></li>
-            <li><i class="fa-solid fa-question-circle"></i> <span>Help</span></li>
             <li><i class="fa-solid fa-wifi"></i> <span>Connected</span></li>
+            <li><i class="fa-solid fa-question-circle"></i> <span>Help</span></li>
             <li><i class="fa-solid fa-user"></i> <span>Login</span></li>
           </ul>
         </nav>
@@ -192,7 +209,4 @@
   <script src="script.js"></script>
 </body>
 
-
 </html>
-
-
