@@ -27,6 +27,11 @@
       scroll-behavior: smooth;
     }
 
+    * {
+      scrollbar-width: thin; 
+      scrollbar-color: var(--accent) #1a1a1a; 
+    }
+
     /* Scrollbar container */
     ::-webkit-scrollbar {
         width: 10px;
@@ -639,6 +644,7 @@
         width: 100%;
       }
     }
+
 
 
 
