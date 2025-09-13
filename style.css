@@ -24,6 +24,7 @@
       color: var(--text-light);
       font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     .container {
@@ -612,4 +613,5 @@
         width: 100%;
       }
     }
+
 
