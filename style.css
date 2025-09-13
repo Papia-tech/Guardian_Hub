@@ -5,6 +5,11 @@
       box-sizing: border-box;
     }
 
+    * {
+      scrollbar-width: thin; /* auto | thin | none */
+      scrollbar-color: #00bcd4 #1a1a1a; /* thumb | track */
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -639,6 +644,7 @@
         width: 100%;
       }
     }
+
 
 
 
