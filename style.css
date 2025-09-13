@@ -5,11 +5,6 @@
       box-sizing: border-box;
     }
 
-    * {
-      scrollbar-width: thin; 
-      scrollbar-color: var(--accent) #1a1a1a; 
-    }
-
     html {
       scroll-behavior: smooth;
     }
@@ -30,6 +25,11 @@
       font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
+    }
+
+    * {
+      scrollbar-width: thin; 
+      scrollbar-color: var(--accent) #1a1a1a; 
     }
 
     /* Scrollbar container */
@@ -644,6 +644,7 @@
         width: 100%;
       }
     }
+
 
 
 
