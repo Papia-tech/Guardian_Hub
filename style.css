@@ -27,6 +27,32 @@
       scroll-behavior: smooth;
     }
 
+    /* Scrollbar container */
+    ::-webkit-scrollbar {
+        width: 10px;
+        /* thickness */
+    }
+
+    /* Scrollbar track (background) */
+    ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+        /* dark background */
+        border-radius: 10px;
+    }
+
+    /* Scrollbar handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        /* teal blue */
+        border-radius: 10px;
+    }
+
+    /* On hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-light);
+        /* darker teal */
+    }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -613,5 +639,6 @@
         width: 100%;
       }
     }
+
 
 
