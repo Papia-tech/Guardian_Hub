@@ -557,6 +557,14 @@
       .card h2 {
         font-size: 18px;
       }
+
+        .second span {
+        display: none;
+      }
+
+      .navigation ul li span {
+        display: none;
+      }
     }
 
     @media (max-width: 900px) {
@@ -607,4 +615,5 @@
       .card.photo img {
         width: 100%;
       }
+
     }
