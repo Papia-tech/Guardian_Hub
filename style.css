@@ -29,7 +29,7 @@
 
     * {
       scrollbar-width: thin; 
-      scrollbar-color: var(--accent) #1a1a1a; 
+      scrollbar-color: var(--accent) #6e6e25; 
     }
 
     /* Scrollbar container */
@@ -644,6 +644,7 @@
         width: 100%;
       }
     }
+
 
 
 
