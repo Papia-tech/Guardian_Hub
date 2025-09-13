@@ -6,8 +6,8 @@
     }
 
     * {
-      scrollbar-width: thin; /* auto | thin | none */
-      scrollbar-color: #00bcd4 #1a1a1a; /* thumb | track */
+      scrollbar-width: thin; 
+      scrollbar-color: #00bcd4 #1a1a1a; 
     }
 
     html {
@@ -644,6 +644,7 @@
         width: 100%;
       }
     }
+
 
 
 
