@@ -116,7 +116,7 @@
       transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease;
-      animation: zoomIn 0.7s ease forwards;
+      animation: zoomIn 1s ease forwards;
     }
 
     .card:hover {
@@ -586,5 +586,6 @@
         width: 100%;
       }
     }
+
 
 
