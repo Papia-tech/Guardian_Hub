@@ -224,8 +224,7 @@
         <div class="back"></div>
 
         <div class="minifront move-right" id="mini">
-            <button class="button1" id="toggleButton">Sign
-                    Up>></button>
+            <button class="button1" id="toggleButton">Sign Up >></button>
         </div>
 
         <div class="front" id="panel">
@@ -248,12 +247,13 @@
                 </div>
             </form>
 
-            <button class="button2" id="mainButton"><a href="dashboard.html" target="blank">Sign
-                    in</a></button>
+            <button class="button2" id="mainButton">Sign
+                in</button>
             <div class="input-container" style="gap: 10px; background: transparent; box-shadow: none; border: none;">
                 <input type="checkbox" id="checkbox" name="checkbox" required>
                 <label for="checkbox" style="color: rgba(46, 37, 20, 255); font-size: 14px;">
-                    I agree to the <a href="#" style="color: rgba(46, 37, 20, 255); text-decoration: underline;">terms and conditions</a>
+                    I agree to the <a href="#" style="color: rgba(46, 37, 20, 255); text-decoration: underline;">terms
+                        and conditions</a>
 
                 </label>
             </div>
@@ -296,9 +296,23 @@
 
             isMoved = !isMoved;
         });
+
+        document.getElementById("mainButton").addEventListener("click", function (e) {
+            e.preventDefault(); // ⛔ stop form submission
+
+            const username = document.getElementById("text").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const checkbox = document.getElementById("checkbox").checked;
+
+            if (username && email && password && checkbox) {
+                window.location.href = "dashboard.html"; // ✅ redirect works now
+            } else {
+                alert("Please fill all fields and agree to the terms.");
+            }
+        });
+
     </script>
 </body>
 
-
 </html>
-
