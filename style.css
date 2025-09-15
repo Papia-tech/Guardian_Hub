@@ -81,8 +81,6 @@
       align-items: center;
       writing-mode: vertical-lr;
       transform: rotateZ(180deg);
-      text-shadow: 0 0 10px rgba(255, 217, 0, 0.512),
-        0 0 20px rgba(255, 200, 0, 0.478);
       border-right: 3px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -394,7 +392,7 @@
       position: relative;
       min-height: 100vh;
       width: 100%;
-      background-color: #222;
+      background-color: #000;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -586,6 +584,7 @@
         width: 100%;
       }
     }
+
 
 
 
