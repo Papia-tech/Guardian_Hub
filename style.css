@@ -28,37 +28,45 @@
     }
 
     * {
-      scrollbar-width: thin; 
-      scrollbar-color: var(--accent) #6e6e25; 
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) #6e6e25;
     }
 
     /* Scrollbar container */
     ::-webkit-scrollbar {
-        width: 10px;
+      width: 10px;
+      /* thickness */
     }
 
+    /* Scrollbar track (background) */
     ::-webkit-scrollbar-track {
-        background: rgba(255, 215, 0, 0.05);
-        border-radius: 10px;
+      background: rgba(255, 215, 0, 0.05);
+      /* dark background */
+      border-radius: 10px;
     }
 
+    /* Scrollbar handle */
     ::-webkit-scrollbar-thumb {
-        background: var(--accent);
-        border-radius: 10px;
+      background: var(--accent);
+      /* teal blue */
+      border-radius: 10px;
     }
 
+    /* On hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: var(--accent-light);
+      background: var(--accent-light);
+      /* darker teal */
     }
 
     .container {
       display: flex;
+      background-color: var(--primary-bg);
       flex-direction: column;
       width: 100%;
     }
 
     .hero {
-      min-height: 100vh;
+      height: 100vh;
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 20fr;
@@ -115,7 +123,7 @@
       transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease;
-      animation: zoomIn 1s ease forwards;
+      animation: zoomIn 0.7s ease forwards;
     }
 
     .card:hover {
@@ -178,6 +186,7 @@
       gap: 10px;
     }
 
+    /* Notifications - fix height + scroll */
     .notification {
       display: flex;
       flex-direction: column;
@@ -189,6 +198,7 @@
       flex: 1;
       list-style: none;
       overflow-y: auto;
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -232,14 +242,19 @@
     .alerts {
       display: flex;
       flex-direction: column;
+
+      /* 👇 Fix card height */
       height: 100%;
       overflow: hidden;
     }
+
+    /* Alerts */
 
     .alert-list {
       font-size: 14px;
       flex: 1;
       overflow-y: auto;
+      margin-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -477,22 +492,29 @@
     }
 
     .photo-grid img {
+      /* fixed width for all images */
       height: 60px;
+      /* fixed height */
       object-fit: cover;
       border-radius: 8px;
       margin-left: -25px;
+      /* negative margin for overlap */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      /* shadow for depth */
       cursor: pointer;
       z-index: 1;
+      /* ensure hover works */
     }
 
     .photo-grid img:hover {
       transform: scale(1.2);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
       z-index: 10;
+      /* bring hovered image to front */
     }
 
+    /* Square Show More Button */
     .show-more-btn {
       position: absolute;
       top: 20px;
@@ -515,78 +537,184 @@
       transform: rotate(90deg);
     }
 
-
     @media (max-width: 1200px) {
-      header {
-        width: 60px;
-        font-size: 28px;
+      .navigation ul li span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .hero {
+        height: 180vh;
+        display: block;
       }
 
       main {
+        position: relative;
+        top: 0;
         left: 60px;
-        padding: 15px;
+        padding: 10px;
+        width: calc(100% - 60px);
+        height: 180vh;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(36, 1fr);
+      }
+
+      .navigation {
+        grid-row: 1 / 2;
+        grid-column: 1 / 7;
+        padding: 15px 25px;
+      }
+
+      .notification {
+        grid-row: 2 / 20;
+        grid-column: 1 / 4;
+      }
+
+      .alerts {
+        grid-row: 2 / 20;
+        grid-column: 4 / 7;
+      }
+
+      .shield {
+        grid-row: 20 / 30;
+        grid-column: 5 / 7;
+      }
+
+      .photo {
+        grid-row: 20 / 31;
+        grid-column: 1 / 5;
+      }
+
+      .prev-photo {
+        grid-row: 31 / 36;
+        grid-column: 1 / 7;
+      }
+
+      .card {
+        width: 100%;
+        height: auto;
+      }
+
+
+      header {
+        width: 60px;
+        font-size: 28px;
       }
 
       .card h2 {
         font-size: 18px;
       }
 
-        .navigation ul li span {
+      .navigation ul li span {
         display: none;
-      }
-    }
-
-    @media (max-width: 900px) {
-
-      main {
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-      }
-
-      .card {
-        width: 100%;
       }
 
       .second {
-        font-size: 1.5rem;
-        padding: 10px;
-      }
-
-      .second span {
-        display: none;
-      }
-
-      .navigation ul li span {
-        display: none;
+        position: relative;
+        left: 60px;
+        min-height: 100vh;
+        width: calc(100% - 60px);
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--text-light);
+        z-index: 1;
+        padding: 20px;
+        animation: appear linear, vanish linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%, entry 60% cover 100%;
       }
     }
 
     @media (max-width: 600px) {
+      .hero {
+        height: 100vh;
+        display: block;
+      }
+
+      main {
+        position: sticky;
+        top: 0;
+        left: 60px;
+        padding: 10px;
+        width: calc(100% - 60px);
+        height: 180vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(32, 1fr);
+      }
+
+      .navigation {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        padding: 15px 25px;
+      }
+
+      .notification {
+        grid-row: 2 / 11;
+        grid-column: 1 / 2;
+      }
+
+      .alerts {
+        grid-row: 11 / 18;
+        grid-column: 1 / 2;
+      }
+
+      .shield {
+        grid-row: 18 / 24;
+        grid-column: 1 / 2;
+      }
+
+      .photo {
+        grid-row: 24 / 29;
+        grid-column: 1 / 2;
+      }
+
+      .prev-photo {
+        grid-row: 29 / 32;
+        grid-column: 1 / 2;
+      }
+
+      .card {
+        width: 100%;
+        height: auto;
+      }
+
+
+      header {
+        width: 60px;
+        font-size: 28px;
+      }
+
       .card h2 {
-        font-size: 16px;
-      }
-
-      .second {
-        font-size: 1.2rem;
-      }
-
-      .second span {
-        display: none;
+        font-size: 18px;
       }
 
       .navigation ul li span {
         display: none;
       }
 
-      .card.photo img {
-        width: 100%;
+      .second {
+        position: relative;
+        left: 60px;
+        min-height: 100vh;
+        width: calc(100% - 60px);
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--text-light);
+        z-index: 1;
+        padding: 20px;
+        animation: appear linear, vanish linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%, entry 60% cover 100%;
       }
     }
-
-
-
-
-
