@@ -633,17 +633,18 @@
 
     @media (max-width: 600px) {
       .hero {
-        height: 100vh;
+        height: 250vh;
         display: block;
       }
 
       main {
-        position: sticky;
+        position: relative;
         top: 0;
         left: 60px;
+        padding-top: 20px;
         padding: 10px;
         width: calc(100% - 60px);
-        height: 180vh;
+        height: 250vh;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(32, 1fr);
       }
