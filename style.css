@@ -36,14 +36,14 @@ body {
   --shadow-strong: 0 12px 25px color-mix(in srgb, var(--base-color) 60%, black);
   --shadow-soft: 0 8px 20px color-mix(in srgb, var(--base-color) 30%, black);
 
-  background: oklch(from var(--base-color) calc(l *1.3) c h);
+  background: linear-gradient(135deg, var(--base-color), oklch(from var(--base-color) calc(l *1.3) c h));
   color: var(--text-light);
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-*{
+* {
   scrollbar-width: thin;
   scrollbar-color: var(--base-color) #111;
 }
@@ -104,6 +104,24 @@ header {
   border-right: 3px solid color-mix(in srgb, var(--base-color) 20%, transparent);
 }
 
+header span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideUpText 1s ease-out forwards;
+}
+
+@keyframes slideUpText {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 header i {
   transform: rotate(90deg);
   margin-bottom: 15px;
@@ -135,7 +153,7 @@ main {
   padding: 20px;
   box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
-  animation: zoomIn 0.7s ease forwards;
+  animation: zoomIn 1s ease forwards;
 }
 
 .card:hover {
@@ -146,8 +164,8 @@ main {
 
 @keyframes zoomIn {
   from {
-    transform: scale(0.95);
-    opacity: 0;
+    transform: scale(0.9);
+    opacity: 0.2;
   }
 
   to {
@@ -155,6 +173,7 @@ main {
     opacity: 1;
   }
 }
+
 
 /* Layout */
 .notification {
@@ -665,5 +684,3 @@ button:hover {
   }
 
 }
-
-
