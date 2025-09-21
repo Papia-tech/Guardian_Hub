@@ -401,6 +401,7 @@ main {
   overflow: hidden;
   background: transparent;
   border: none;
+  backdrop-filter: none;
   padding: 20px;
   box-shadow: none;
 }
@@ -665,3 +666,4 @@ button:hover {
   }
 
 }
+
