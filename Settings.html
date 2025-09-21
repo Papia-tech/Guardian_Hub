@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="https://papia-tech.github.io/Guardian_Hub/Favicon.png" type="image/png">
+
+    <title>Guardian Hub - Settings</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --base-color: #4CAF50;
+            --base-light: #80e27e;
+            --card-bg: rgba(0, 0, 0, 0.6);
+            --card-border: rgba(255, 255, 255, 0.15);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--base-light);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            margin-bottom: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--base-color);
+            border-color: var(--base-light);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--base-light);
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 1rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 60%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #555;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #ccc;
+        }
+
+        /* Toggle switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #555;
+            transition: 0.3s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        input:checked+.slider {
+            background-color: var(--base-color);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(24px);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            background: var(--base-color);
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--base-light);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="dashboard.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+        <header><i class="fa-solid fa-gear"></i> Settings</header>
+
+        <!-- Profile Settings -->
+        <div class="card">
+            <h2><i class="fa-solid fa-user"></i> Profile</h2>
+            <div class="setting-item">
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username">
+            </div>
+            <div class="setting-item">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+            <div class="setting-item">
+                <label>Password</label>
+                <input type="password" placeholder="Enter new password">
+            </div>
+            <button class="btn">Save Profile</button>
+        </div>
+
+        <!-- Appearance Settings -->
+        <div class="card">
+            <h2><i class="fa-solid fa-paint-brush"></i> Appearance</h2>
+            <div class="setting-item">
+                <label>Theme</label>
+                <select>
+                    <option>Light</option>
+                    <option selected>Dark</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>Accent Color</label>
+                <input type="color" value="#4CAF50">
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="card">
+            <h2><i class="fa-solid fa-bell"></i> Notifications</h2>
+            <div class="setting-item">
+                <label>Email Alerts</label>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>SMS Alerts</label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>In-App Alerts</label>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- System Options -->
+        <div class="card">
+            <h2><i class="fa-solid fa-sliders"></i> System</h2>
+            <button class="btn">Reset Dashboard</button>
+            <button class="btn" style="background:#d9534f; margin-left:10px;">Logout</button>
+        </div>
+    </div>
+</body>
+
+</html>
