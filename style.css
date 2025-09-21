@@ -132,7 +132,7 @@ main {
   position: fixed;
   top: 0;
   left: 80px;
-  padding: 40px;
+  padding: 20px;
   width: calc(100% - 80px);
   height: 100vh;
   background: linear-gradient(135deg, var(--base-color), oklch(from var(--base-color) calc(l *1.3) c h));
@@ -524,7 +524,7 @@ button:hover {
 }
 
 .photo-grid img {
-  height: 50px;
+  height: 60px;
   object-fit: cover;
   border-radius: 8px;
   margin-left: 25px;
