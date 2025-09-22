@@ -90,7 +90,7 @@ body {
 header {
   z-index: 9999;
   position: fixed;
-  width: 80px;
+  width: 70px;
   height: 100vh;
   background: #000;
   font-size: 32px;
@@ -680,6 +680,7 @@ button:hover {
     grid-row: 29 / 32;
     grid-column: 1 / 2;
   }
+
 
 
 }
